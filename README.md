@@ -51,7 +51,7 @@ Installation
 To install *svg-sprite* globally, run
 
 ```bash
-npm install svg-sprite -g
+npm install @twbs/svg-sprite -g
 ```
 
 on the command line.

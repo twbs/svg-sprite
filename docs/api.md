@@ -21,7 +21,7 @@ To understand these methods' roles and interaction, please have a look at the fo
 ```javascript
 'use strict';
 
-var SVGSpriter = require('svg-sprite'),
+var SVGSpriter = require('@twbs/svg-sprite'),
     mkdirp = require('mkdirp'),
     path = require('path'),
     fs = require('fs'),
