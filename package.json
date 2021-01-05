@@ -1,6 +1,6 @@
 {
   "name": "@twbs/svg-sprite",
-  "version": "1.6.0-alpha.0",
+  "version": "1.6.0",
   "publishConfig": {
     "access": "public"
   },
