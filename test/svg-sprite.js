@@ -36,6 +36,8 @@ var cwdWeather = path.join(__dirname, 'fixture', 'svg', 'single'),
     cwdAlign = path.join(__dirname, 'fixture', 'svg', 'css'),
     dest = path.normalize(path.join(__dirname, '..', 'tmp'));
 
+var isNodeGreaterThan10 = process.version.split('.')[0].slice(1) > 10;
+
 /**
  * Add a bunch of SVG files
  *
@@ -338,7 +340,7 @@ describe('svg-sprite', function () {
                     compareSvg2Png(
                         path.join(__dirname, '..', 'tmp', 'css', 'svg', svg.packed),
                         path.join(__dirname, '..', 'tmp', 'css', 'png', 'css.packed.png'),
-                        path.join(__dirname, 'expected', 'png', 'css.packed.png'),
+                        path.join(__dirname, 'expected', 'png', isNodeGreaterThan10 ? 'css.packed.12.png' : 'css.packed.png'),
                         path.join(__dirname, '..', 'tmp', 'css', 'png', 'css.packed.diff.png'),
                         done,
                         'The packed sprite doesn\'t match the expected one!'
@@ -508,7 +510,7 @@ describe('svg-sprite', function () {
                     compareSvg2Png(
                         path.join(__dirname, '..', 'tmp', 'view', 'svg', svg.packed),
                         path.join(__dirname, '..', 'tmp', 'view', 'png', 'view.packed.png'),
-                        path.join(__dirname, 'expected', 'png', 'css.packed.png'),
+                        path.join(__dirname, 'expected', 'png', isNodeGreaterThan10 ? 'css.packed.12.png' : 'css.packed.png'),
                         path.join(__dirname, '..', 'tmp', 'view', 'png', 'view.packed.diff.png'),
                         done,
                         'The packed sprite doesn\'t match the expected one!'
